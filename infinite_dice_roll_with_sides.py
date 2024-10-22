@@ -19,7 +19,8 @@ def roll_and_multiply(sides):
     sides - the number of sides to roll.
     """
     result = 1  # set result to 1
-    roll = roll_dice(sides)  # roll the dice with specified number of sides of dice
+    # roll the dice with specified number of sides of dice
+    roll = roll_dice(sides)
     while roll == sides:  # while rolled dies is not the number of sides of dice
         result *= sides  # multiply result by number of sides of dice
         roll = roll_dice(sides)  # roll the dice again
