@@ -5,19 +5,19 @@ Dice game that rolls infinitely number of times until last rolled dice is not 6.
 import random  # generate random numbers
 
 
-def roll_dice():
+def roll_dice() -> int:
     """
     Rolls the dice.
     """
     return random.randint(1, 6)  # roll 6-sized dice
 
 
-def roll_and_multiply():
+def roll_and_multiply() -> int:
     """
     Rolls the dice infinite number of times until last rolled dice is not 6, then multiply the rolled dice.
     """
     result = 1  # set result to 1
-    roll = roll_dice()  # roll the dice
+    roll: int = roll_dice()  # roll the dice
     while roll == 6:  # while rolled dice is 6
         result *= 6  # multiply result by 6
         roll = roll_dice()  # roll the dice again
